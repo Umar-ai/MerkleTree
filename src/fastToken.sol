@@ -1,15 +1,12 @@
 // SPDX-License-Identifier:MIT
 pragma solidity ^0.8.34;
-import {ERC20} from 'openzeppelin-contracts/contracts/token/ERC20/ERC20.sol';
-import {Ownable} from 'openzeppelin-contracts/contracts/access/Ownable.sol';
+import {ERC20} from "openzeppelin-contracts/contracts/token/ERC20/ERC20.sol";
+import {Ownable} from "openzeppelin-contracts/contracts/access/Ownable.sol";
 
+contract fastToken is ERC20, Ownable {
+    constructor() ERC20("fast", "FAST") Ownable(msg.sender) {}
 
-contract fastToken is ERC20,Ownable{
-    constructor()ERC20('fast','FAST')Ownable(msg.sender){
-        
-    }
-
-    function mint(address to,uint256 amount)external onlyOwner{
-        _mint(to,amount);
+    function mint(address to, uint256 amount) external onlyOwner {
+        _mint(to, amount);
     }
 }
