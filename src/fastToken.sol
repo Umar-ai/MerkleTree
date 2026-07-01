@@ -3,7 +3,7 @@ pragma solidity ^0.8.34;
 import {ERC20} from "openzeppelin-contracts/contracts/token/ERC20/ERC20.sol";
 import {Ownable} from "openzeppelin-contracts/contracts/access/Ownable.sol";
 
-contract fastToken is ERC20, Ownable {
+contract FastToken is ERC20, Ownable {
     constructor() ERC20("fast", "FAST") Ownable(msg.sender) {}
 
     function mint(address to, uint256 amount) external onlyOwner {
