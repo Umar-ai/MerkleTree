@@ -5,7 +5,7 @@ solc_version="0.8.34"
 libs = ["lib"]
 fs_permissions=[{access="read-write",path="./"}]
 remappings=['@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts',
-'@chainlink/contracts=lib/chainlink-brownie-contracts/contracts/','murky/=lib/murky/']
+'@chainlink/contracts=lib/chainlink-brownie-contracts/contracts/','murky/=lib/murky/','foundry-devops/=lib/foundry-devops/']
 
 [invariant]
 runs=128
